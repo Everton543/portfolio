@@ -1,0 +1,104 @@
+:root {
+    --neon-blue: #08f;
+    --neon-pink: #f0f;
+    --neon-green: #0f0;
+    --neon-yellow: #ff0;
+    --neon-orange: #f90;
+
+    --neon-purple: #b0f;
+    --neon-red: #f00;
+    --neon-aqua: #0ff;
+
+    --neon-dark: #111;
+    --neon-light: #eee;
+    --neon-accent: #444;
+
+    --neon-blue-dark: #0077bb;
+    --neon-pink-dark: #bb00bb;
+    --neon-green-dark: #00bb00;
+    --neon-yellow-dark: #bbbb00;
+    --neon-orange-dark: #bb5500;
+
+    --neon-text-glow: #08f;
+    --neon-background: #000;
+    --neon-glow-intensity: 0 0 8px, 0 0 1px, 0 0 5px, 0 0 2px;
+
+    --bs-emphasis-color: #f0f !important;
+    --bs-emphasis-color-rgb: rgb(235, 26, 250) !important;
+
+    --neon-blink-primary: var(--neon-blue);
+    --neon-blink-secondary: var(--neon-pink);
+    --primary-color: var(--neon-blue);
+    --secondary-color: var(--neon-pink);
+
+    --neon-border-width: 2px;
+}
+
+@keyframes neonColorShift {
+    0%, 100% {
+        text-shadow:
+            0 0 2px var(--neon-blink-primary),
+            0 0 8px var(--neon-blink-primary),
+            0 0 16px var(--neon-blink-primary);
+        color: var(--neon-blink-primary);
+    }
+    50% {
+        text-shadow:
+            0 0 2px var(--neon-blink-secondary),
+            0 0 8px var(--neon-blink-secondary),
+            0 0 16px var(--neon-blink-secondary);
+        color: var(--neon-blink-secondary);
+    }
+}
+
+@keyframes blinkBorder {
+    0%, 100% {
+        border-color: var(--neon-blink-primary);
+    }
+    50% {
+        border-color: var(--neon-blink-secondary);
+    }
+}
+
+.neon-navbar {
+    border-bottom: var(--neon-border-width) solid var(--neon-blue);
+    animation: blinkBorder 3s infinite alternate;
+}
+
+.btn-get-started{
+    animation: blinkBorder 3s infinite alternate;
+}
+
+.btn-about-contact{
+    animation: blinkBorder 3s infinite alternate;
+}
+
+.nav-link:not(:focus) {
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: neonColorShift 3s infinite alternate;
+    transition: all 0.3s ease-in-out;
+}
+
+.blink_button{
+    border-bottom: var(--neon-border-width) solid var(--neon-blue);
+    animation: blinkBorder 3s infinite alternate;
+}
+
+.blink_text{
+    animation: neonColorShift 3s infinite alternate;
+    transition: all 0.3s ease-in-out;
+}
+
+h1:hover {
+    animation-play-state: paused;
+    text-shadow:
+        0 0 4px #fff,
+        0 0 8px var(--neon-blink-primary),
+        0 0 12px var(--neon-blink-secondary);
+}

@@ -1,0 +1,102 @@
+body {
+    background-color: var(--neon-background);
+}
+
+a{
+    text-decoration: none;
+}
+
+.text-neon {
+    color: var(--neon-blue) !important;
+    text-shadow: var(--neon-glow-intensity) var(--neon-text-glow);
+}
+
+h2{
+    color: var(--neon-light);
+}
+
+p, li{
+    color: var(--neon-light);
+}
+
+.navbar-toggler {
+    border-color: var(--neon-blue);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(0, 136, 255)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.button {
+    background-color: var(--neon-blue);
+    border: 1px solid var(--neon-accent);
+    color: var(--neon-dark);
+}
+
+.fa, .fas, .far, .fal, .fad, .fab { 
+    color: var(--neon-blue);
+    text-shadow: var(--neon-text-glow-blue);
+}
+
+.active, .active .fas{
+    color: var(--neon-purple) !important;
+}
+
+.text-neon:hover, .navbar-brand:hover, .nav-link:hover {
+    color: #fff;
+    text-shadow: 
+        0 0 15px #fff, 
+        0 0 25px var(--neon-text-glow), 
+        0 0 35px var(--neon-text-glow), 
+        0 0 45px var(--neon-text-glow), 
+        0 0 55px var(--neon-text-glow);
+}
+
+.active:hover, .active .fas:hover{
+    color: #fff !important;
+    text-shadow: 
+        0 0 15px #fff, 
+        0 0 25px var(--neon-pink), 
+        0 0 35px var(--neon-pink), 
+        0 0 45px var(--neon-pink), 
+        0 0 55px var(--neon-pink) !important;
+}
+
+.nav-link:focus {
+    color: #fff; 
+    background-color: transparent; 
+    outline: none;
+    text-shadow: 
+        0 0 10px #fff, 
+        0 0 20px var(--neon-blue), 
+        0 0 30px var(--neon-blue), 
+        0 0 40px var(--neon-blue);
+}
+
+
+.nav-link.active, .nav-link:hover, .nav-link:focus {
+    color: #fff;
+    text-shadow: 
+        0 0 15px #fff, 
+        0 0 25px var(--neon-blue), 
+        0 0 35px var(--neon-blue), 
+        0 0 45px var(--neon-blue), 
+        0 0 55px var(--neon-blue);
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer a {
+    color: #fff; 
+    margin: 0 10px; 
+    font-size: 24px; 
+}
+
+.footer a:hover {
+    color: #ddd;
+}
+  
